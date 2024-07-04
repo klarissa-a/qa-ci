@@ -29,3 +29,18 @@ jobs:
     - run: npm ci
     # - run: npm run build --if-present
     - run: npm test
+
+    - name: send telegramm message on push
+      uses: appleboy/telegramm-action@master
+      with: 
+      to: -4149612127
+      token: $ {{ secrets.TELEGRAMM_TOKEN}}
+      photo: ./test.png
+      message: |
+      ${{ github.actor }} created.commit new view:
+      Commit massege: ${{ github.event.commits[0].massage }}
+
+      Repository: ${{ guihub.repository }}
+
+      See changes: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+
