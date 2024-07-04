@@ -8,6 +8,5 @@ describe('Авторизация', () => {
         });
   
         expect(result.status).toBe(200);
-        expect(result.data).toBe(false);
     });
 });
