@@ -40,7 +40,7 @@ jobs:
           ${{ github.actor }} created.commit new view:
           Commit massege: ${{ github.event.commits[0].massage }}
 
-          Repository: ${{ guihub.repository }}
+          Repository: ${{ github.repository }}
 
           See changes: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
 
