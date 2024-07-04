@@ -30,8 +30,8 @@ jobs:
     # - run: npm run build --if-present
     - run: npm test
 
-    - name: send telegramm message on push
-      uses: appleboy/telegramm-action@master
+    - name: send telegram message on push
+      uses: appleboy/telegram-action@master
       with: 
         to: -4149612127
         token: $ {{ secrets.TELEGRAMM_TOKEN}}
